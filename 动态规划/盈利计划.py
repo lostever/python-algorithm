@@ -94,8 +94,8 @@ class Solution4:
         return sum(dp[minProfit]) % MOD
         
 if __name__ == '__main__':
-    n = 5
-    minProfit = 3
-    group = [2,2]
-    profit = [2,3]
+    n = 25
+    minProfit = 12
+    group = [2,2,4,8,9]
+    profit = [2,3,1,4,2]
     print(Solution4().profitableSchemes(n, minProfit, group, profit))
