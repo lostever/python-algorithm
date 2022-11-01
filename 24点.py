@@ -22,6 +22,6 @@ def func(nums, tar):
             return True
     return False
     
-l = [7, 2, 1, 10]
+l = [7, 3, 1, 10]
 print(tfp(l, 24))
         
