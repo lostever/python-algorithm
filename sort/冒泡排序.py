@@ -11,7 +11,7 @@ def bubble_sort(alist):
             break
 
 if __name__ == '__main__':
-    a = [1,3,5,7,9,8,6,4,2,0,23,14,3,6]
+    a = [1,3,8,9,5,7,9,8,6,4,2,0,23,14,3,6]
     bubble_sort(a)
     print(a)
     
