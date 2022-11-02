@@ -7,11 +7,11 @@ def bubble_sort(alist):
             if alist[j] > alist[j+1]:
                 alist[j], alist[j+1] = alist[j+1], alist[j]
                 std = True
-        if not std: # 如果某一轮下来没有发生数据的位置交换
+        if not std: # 如果某一轮下来没有发生数据的位置交换,则退出整个循环
             break
 
 if __name__ == '__main__':
-    a = [1,3,8,9,5,7,9,8,6,4,2,0,23,14,3,6]
+    a = [1,3,8,9,5,7,9,8,6,4,2,0,78,39,23,14,3,6]
     bubble_sort(a)
     print(a)
     
