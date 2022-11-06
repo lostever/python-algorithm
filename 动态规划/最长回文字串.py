@@ -12,5 +12,5 @@ class Solution:
         return length
 
 if __name__ == '__main__':
-    A = "aba"
+    A = "abaabababbabbabbababaaba"
     print(Solution().getLongestPalindrome(A))
