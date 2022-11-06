@@ -12,6 +12,7 @@ def dfs(x, y, grid, m, n):
             if grid[x+dx][y+dy]:
                 dfs(x+dx, y+dy, grid, m, n)
                 
+                
 if __name__ == '__main__':
     grid =  [[1,1,0,0,0],[0,1,0,1,1],[0,0,0,1,1],[0,0,0,0,0],[0,0,1,1,1]]
     res = 0

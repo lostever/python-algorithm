@@ -16,6 +16,7 @@ def quick_sort(alist, start, end):
     quick_sort(alist, start, left-1)
     quick_sort(alist, right+1, end)
         
+        
 if __name__ == '__main__':
     a = [5,7,9,8,6,4,1,3,8,9,2,0,78,39,23,14,3,6]
     n = len(a)-1

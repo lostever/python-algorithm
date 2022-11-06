@@ -11,6 +11,7 @@ class Solution:
             length = max(func(A,n,i,i), func(A,n,i,i+1),length)
         return length
 
+
 if __name__ == '__main__':
     A = "abaabababbabbabbababaaba"
     print(Solution().getLongestPalindrome(A))
