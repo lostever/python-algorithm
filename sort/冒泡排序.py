@@ -2,7 +2,7 @@ def bubble_sort(alist):
     # 冒泡排序
     n = len(alist)
     for i in range(n-1, 0, -1): # 外层循环控制比较轮数
-        std = False  
+        std = False  # sorted
         for j in range(i): # 内层循环控制每轮的比较数
             if alist[j] > alist[j+1]:
                 alist[j], alist[j+1] = alist[j+1], alist[j]
