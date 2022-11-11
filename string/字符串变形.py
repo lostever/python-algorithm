@@ -1,4 +1,5 @@
 # https://www.nowcoder.com/practice/c3120c1c1bc44ad986259c0cf0f0b80e?tpId=295&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj
+
 class Solution:
     def trans(self , s: str, n: int) -> str:
         res = s.split(' ')
