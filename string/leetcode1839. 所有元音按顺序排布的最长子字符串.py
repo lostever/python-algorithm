@@ -1,3 +1,5 @@
+# https://leetcode.cn/problems/longest-substring-of-all-vowels-in-order/submissions/381112616/
+
 class Solution:
     def longestBeautifulSubstring(self, word: str) -> int:
         nex = {'a': ('a', 'e'), 'e': ('e', 'i'), 'i': ('i', 'o'), 'o': ('o', 'u'), 'u': ('u',)}
