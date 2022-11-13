@@ -8,13 +8,14 @@ for _ in range(n):
 exp = input()
 stack = []
 res = 0
+
 for i in exp:
-    if i == ')':
+    if i == ')':  # 每遇到一个右括号,将栈中最后两个矩阵相乘,再将结果压入栈中
         b = stack.pop() # 这里一定要注意先后顺序,后面的是b, 前面的是a.
         a = stack.pop()
         res += a[0]*a[1]*b[1]
         stack.append([a[0], b[1]])
-    elif i.isalpha():
+    elif i.isalpha():  # 每遇到一个字母,将矩阵数组中的第一个矩阵取出,压入栈中
         stack.append(matrixs.pop(0))
 
 print(res)
