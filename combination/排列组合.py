@@ -11,12 +11,12 @@ def combination(n,c,com=1,limit=0,res=[]):
                             
 if __name__ == '__main__':
     print("排列：")
-    for res in combination(3,3,0):
+    for res in combination(8,8,0):
         print(res)
 
-    print("组合：")
-    for res in combination(3,3):
-        print(res)
+    # print("组合：")
+    # for res in combination(3,3):
+    #     print(res)
 
-    for res in combination(3,2):
-        print(res)
+    # for res in combination(3,2):
+    #     print(res)
