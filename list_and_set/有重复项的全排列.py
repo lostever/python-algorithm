@@ -20,5 +20,8 @@ class Solution:
     
 if __name__ == '__main__':
     a = 'qqe'
-    b = ''.join(str(x) for x in [1,2,3,4,6,4,6,4,6,5,6,7,8])
-    print(Solution().permutation(a))
+    b = ''.join(str(x) for x in [1,6,4,1,4,6,5,6,7,7,8])
+    res = Solution().permutation(b)
+    print(res)
+    print(len(res))
+    

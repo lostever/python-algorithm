@@ -13,7 +13,7 @@ def comb1(k, available, used):
             yield c 
 
 if __name__ == '__main__':
-    n = 4
-    k = 2
+    n = 8
+    k = 5
     for res in comb1(k,list(range(1,n+1)),[]):
         print(res)
