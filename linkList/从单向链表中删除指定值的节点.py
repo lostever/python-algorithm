@@ -38,15 +38,17 @@ class linkList():
             pre.next = cur.next
 
 
-s = input().split()
-N = s.pop(0)
-node = Node(s.pop(0))
-d = s.pop()
-link = linkList(node)
-while s:
-    val = s.pop(0)
-    k = s.pop(0)
-    link.insert(val, k)
+if __name__ == '__main__':
+        
+    s = input().split()
+    N = s.pop(0)
+    node = Node(s.pop(0))
+    d = s.pop()
+    link = linkList(node)
+    while s:
+        val = s.pop(0)
+        k = s.pop(0)
+        link.insert(val, k)
 
-link.delete(d)
-link.travel()
+    link.delete(d)
+    link.travel()
