@@ -1,3 +1,6 @@
+# https://leetcode.cn/problems/intersection-of-two-linked-lists/description/
+
+
 # 优秀解法
 class Solution:
     def getIntersectionNode(self, headA, headB):
@@ -10,6 +13,7 @@ class Solution:
                                             # 长度差就消除了
         return pA
     
+
 # 我的解法
 class Solution1:
     def getIntersectionNode(self, headA, headB):
