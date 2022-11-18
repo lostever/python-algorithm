@@ -15,5 +15,5 @@ class Solution:
             
 if __name__ == '__main__':
     arr = [5,3,2,3,7,9,21,13,11]
-    aim = 23
+    aim = 459
     print(Solution().minMoney(arr,aim))
