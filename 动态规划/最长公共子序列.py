@@ -17,14 +17,14 @@ class Solution:
             for j in range(1,n+1):
                 if s1[i-1] == s2[j-1]:
                     dp[i][j] = dp[i-1][j-1] + 1
-                    dir[i-1][j-1] = 2
+                    dir[i-1][j-1] = 2 # 表明从左上角来(两字符相同)
                 else:
                     if dp[i][j-1] > dp[i-1][j]:
                         dp[i][j] = dp[i][j-1]
-                        dir[i-1][j-1] = 1
+                        dir[i-1][j-1] = 1 # 表明从左边来(两字符不同)
                     else:
                         dp[i][j] = dp[i-1][j]
-                        dir[i-1][j-1] = 3
+                        dir[i-1][j-1] = 3 # 表明从上面来(两字符不同)
         # 开始根据dir还原选择的字符,如果输入的是s1,则使用i的位置,s2则用j
         ans = []
         def restore(i,j,s,dir,ans):
