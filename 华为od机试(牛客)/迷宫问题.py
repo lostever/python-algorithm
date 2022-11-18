@@ -19,15 +19,14 @@ while res:
     if (x,y) == end:
         break
     for dx, dy in [(1,0),(-1,0),(0,1),(0,-1)]:
-        if x+dx == m or y+dy == n or x+dx < 0 or y+dy < 0:
-            d[(x+dx,y+dy)] = 1
-            continue
-        if d[(x+dx,y+dy)] == 0:
-            d[(x+dx,y+dy)] =1
+        if 0 <= x+dx < m and 0 <= y+dy < n and d[(x+dx,y+dy)] == 0:
             res.append((x+dx,y+dy))
             break
+        else:
+            continue
     else:
         res.pop()
+
 for a,b in res:
     print(f'({a},{b})')
     
