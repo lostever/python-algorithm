@@ -23,7 +23,28 @@ class Solution:
                 return False
         return True
     
+class Solution1:
+    def isValidString(self , s: str) -> bool:
+        res = []
+        for i in s:
+            if i == '*' or i == '(':
+                res.append(i)
+            else:
+                if not res:
+                    return False
+                n = -1
+                while n>-len(res) and res[n]!='(':
+                    n -= 1
+                res.pop(n)
+        while res.count('('):
+            if res.pop() == '*':
+                res.remove('(')
+            else:
+                return False
+        return True
+                
 
 if __name__ == '__main__':
     a = "((((()(()()()*()(((((*)()*(**(())))))(())()())(((())())())))))))(((((())*)))()))(()((*()*(*)))(*)()"
-    print(Solution().isValidString(a))
+    b = '(*)'
+    print(Solution1().isValidString(b))
