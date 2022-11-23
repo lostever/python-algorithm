@@ -1,4 +1,6 @@
-#
+# https://www.nowcoder.com/practice/bb1615c381cc4237919d1aa448083bcc
+
+
 # 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
 #
 # 计算模板串S在文本串T中出现了多少次
@@ -34,15 +36,15 @@ class Solution:
                 j += 1
                 if j == len(S):
                     cnt += 1
+                    j = nex_ar[j-1]
             elif j > 0:
                 j = nex_ar[j-1]
             else:
                 i += 1
-                j = 0
         return cnt
 
         
 if __name__ == '__main__':
-    a = 'ababac'
+    a = 'ababab'
     print(Solution().nextl(a))
-    print(Solution().kmp(a, 'ababababac'))
+    print(Solution().kmp(a, 'abababab'))
