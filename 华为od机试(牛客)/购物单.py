@@ -1,14 +1,14 @@
 N, m = list(map(int, input().split()))
 main = dict()
-appendage = dict()
+appendix = dict()
 for i in range(1, m+1):
     v, p, q = list(map(int, input().split()))
     if q == 0:
         main[i] = [v, v*p]
-    elif q in appendage:
-        appendage[q].append([v, v*p])
+    elif q in appendix:
+        appendix[q].append([v, v*p])
     else:
-        appendage[q] = [[v, v*p]]
+        appendix[q] = [[v, v*p]]
         
 dp = [0] * (N + 1)
 for key, value in main.items():
@@ -16,14 +16,14 @@ for key, value in main.items():
     v = []
     w.append(value[0])
     v.append(value[1])
-    if key in appendage:
-        w.append(value[0]+appendage[key][0][0])
-        v.append(value[1]+appendage[key][0][1])
-        if len(appendage[key]) == 2:
-            w.append(value[0]+appendage[key][1][0])
-            v.append(value[1]+appendage[key][1][1])
-            w.append(value[0]+appendage[key][0][0] + appendage[key][1][0])
-            v.append(value[1]+appendage[key][0][1] + appendage[key][1][1])
+    if key in appendix:
+        w.append(value[0]+appendix[key][0][0])
+        v.append(value[1]+appendix[key][0][1])
+        if len(appendix[key]) == 2:
+            w.append(value[0]+appendix[key][1][0])
+            v.append(value[1]+appendix[key][1][1])
+            w.append(value[0]+appendix[key][0][0] + appendix[key][1][0])
+            v.append(value[1]+appendix[key][0][1] + appendix[key][1][1])
         
     for i in range(N, -1, -10):  # 注意这个for循环是在上一个for循环的内部
         for j in range(len(w)):
