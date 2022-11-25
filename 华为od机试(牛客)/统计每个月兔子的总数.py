@@ -26,5 +26,5 @@ def my_func():
 
 
 if __name__ == '__main__':
-    # func_no1()
-    my_func()
+    func_no1()
+    # my_func()

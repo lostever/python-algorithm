@@ -11,6 +11,6 @@ def lcm(x, y):
     return int(x*y/n)
 
 
-a, b = 369, 289
+a, b = 369412, 289424
 print(gcd(a, b))
 print(lcm(a, b))
